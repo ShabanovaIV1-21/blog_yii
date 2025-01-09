@@ -1,0 +1,56 @@
+.is-invalid{
+    animation: invalid .8s, ease 1;
+}
+
+.invalid-feedback {
+    animation: invalid-feedback .8s, ease 1;
+}
+
+.is-valid{
+    animation: valid .8s, ease 1;
+}
+
+#main {
+    animation: body 2s, ease 1;
+
+}
+
+@keyframes body {
+    0% {
+        opacity: 0
+    }
+    100% {
+        opacity: 1
+    }
+}
+
+@keyframes invalid {
+    0%, 50% ,100% {
+        transform: translateY(0)
+    }
+    25%, 75% {
+        transform: translateY(-10px)
+    }
+}
+
+@keyframes invalid-feedback {
+    0% {
+        transform: translateX(-100px)
+    }
+    100% {
+        transform: translateY(0px)
+    }
+}
+
+@keyframes valid {
+    0% {
+        box-shadow: 0 0 1px green;
+
+    }
+    50% {
+        box-shadow: 0 0 10px rgb(11, 230, 11);
+    }
+    100% {
+        box-shadow: 0 0 1px green;
+    }
+}
